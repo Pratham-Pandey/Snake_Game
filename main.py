@@ -252,6 +252,7 @@ while quit_game == False:
 
         #Loading Sound Effects
         eat_sound = pygame.mixer.Sound('sound1.mp3')
+        hi_score_sound = pygame.mixer.Sound("sound2.mp3")
         game_over_sound = pygame.mixer.Sound('game_over.wav')
 
         pygame.draw.rect(win, midnight_blue, pygame.Rect(high_score_x, current_score_y, 100, 50), 0, 5)
@@ -320,6 +321,7 @@ while quit_game == False:
 
             if score>int(h_score):
                 h_score = score
+                hi_score_sound.play(0)
 
         obj_1.obj_x += obj_1.diff_x
         obj_1.obj_y += obj_1.diff_y
